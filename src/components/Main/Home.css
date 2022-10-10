@@ -1,0 +1,25 @@
+.home_bg {
+  width: 100%;
+  mask-image: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0, 1),
+    rgb(0, 0, 0, 0.8),
+    rgb(0, 0, 0, 0)
+  );
+  position: relative;
+  z-index: -1;
+  /* margin: 0 5px; */
+  margin-bottom: -360px;
+}
+.homerow {
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: space-around;
+  /* flex-direction: row; */
+  /* z-index: 15; */
+  /* margin: 0px 5px; */
+}

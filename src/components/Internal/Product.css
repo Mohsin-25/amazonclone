@@ -1,0 +1,76 @@
+.product {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: flex-end; */
+  max-height: 400px;
+  width: 100%;
+  min-width: 100px;
+  background-color: white;
+  position: relative;
+  z-index: 100;
+  margin: 10px 10px;
+  border: 1px solid darkgray;
+
+  /* padding: 10px; */
+  /* border-radius: 5px; */
+}
+.pinfo {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  align-items: center;
+
+}
+.pcompany {
+  font-weight: 700;
+}
+.pprice {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.prating {
+  display: flex;
+}
+.product > img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  /* margin-bottom: 10px; */
+  margin-top: 10px;
+  /* border-radius: 5px; */
+}
+
+.btn {
+  border: 1px solid;
+  border-color: rgb(234, 173, 19);
+  padding: 2px 20px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.add {
+  background-color: rgb(255, 216, 117);
+}
+.add:hover {
+  background-color: rgb(255, 200, 100);
+}
+.remove {
+  background-color: red;
+  color: white;
+}
+.remove:hover {
+  background-color: rgb(240, 0, 0);
+}
+
+.stars {
+  color: rgb(247, 153, 29);
+}
+.reviews {
+  color: rgb(0, 113, 133);
+  font-weight: 500;
+}
+strike {
+  font-weight: 700;
+}

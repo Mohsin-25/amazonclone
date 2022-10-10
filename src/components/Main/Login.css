@@ -1,0 +1,74 @@
+.login {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: white;
+  align-items: center;
+  /* margin-top: -150px; */
+  z-index: 100;
+}
+.login-logo {
+  width: 100px;
+  transform: scale(1.5);
+  object-fit: contain;
+  margin: 15px 0;
+}
+.login h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.login h5 {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.login p {
+  font-size: 12px;
+  margin: 5px 0;
+}
+.login input {
+  height: 30px;
+  width: 95%;
+  background-color: white;
+  margin-bottom: 10px;
+  font-size: 15px;
+  padding: 0 5px;
+}
+.login-div {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  object-fit: contain;
+  border: 1px solid lightgray;
+  padding: 25px;
+}
+.login a {
+  color: rgb(0, 102, 192);
+}
+.login a:hover {
+  color: rgb(196, 85, 0);
+}
+.sign-in {
+  background-color: rgb(255, 216, 20);
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid rgb(234, 173, 19);
+  margin-top: 10px;
+  font-weight: bolder;
+}
+.sign-in:hover {
+  background-color: rgb(236, 193, 0);
+}
+.register {
+  background-color: rgb(232, 234, 237);
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid darkgray;
+  margin-top: 10px;
+  font-weight: bolder;
+}
+.register:hover {
+  background-color: lightgray;
+}

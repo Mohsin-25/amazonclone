@@ -1,0 +1,243 @@
+.navbarmain {
+  position: sticky;
+  /* border: 1px solid black; */
+  background-color: rgb(19, 25, 33);
+  display: flex;
+  height: 60px;
+  align-items: center;
+  position: relative;
+  /* position: fixed; */
+  top: 0%;
+  z-index: 50;
+}
+
+.navbarmain ul {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  /* padding: 2px; */
+}
+.navbarmain li {
+  position: relative;
+  padding: 5px 5px 0px 5px;
+  margin: 0px 2px;
+  cursor: pointer;
+  color: white;
+  height: 100%;
+}
+.navbarmain li:hover {
+  /* border: thin solid white; */
+  box-shadow: 0 0 0 1px white;
+}
+.navbarmain a {
+  text-decoration: none;
+}
+.navbarmain .top {
+  font-size: 12px;
+  font-weight: 600;
+  position: relative;
+  top: 5px;
+}
+.navbarmain .bottom {
+  /* color: red; */
+  font-weight: bolder;
+  font-size: 16px;
+}
+.navbarmain .logo {
+  /* border: 1px solid white; */
+  /* margin-top: 5px; */
+  width: 150px;
+  padding-top: 5px;
+}
+.navbarmain .logodiv {
+  padding-bottom: 5px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+.logodiv:hover {
+  /* border: thin solid white; */
+  box-shadow: 0 0 0 1px white;
+}
+.location {
+  display: flex;
+}
+.locationicon {
+  position: relative;
+  top: 10px;
+  padding: 0;
+}
+.navbarmain .link {
+  flex-direction: row;
+}
+
+.searchbox {
+  display: flex;
+  height: 45px;
+  flex: 1;
+}
+.dropbox {
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 0 5px;
+  width: 45px;
+  margin: 1px;
+  color: black;
+  background-color: rgb(243, 243, 243);
+  border-radius: 3px;
+}
+.dropbox:hover,
+.navbarmain #arrow:hover {
+  background-color: rgb(218, 218, 218);
+}
+.s_icon {
+  color: black;
+  background-color: rgb(254, 189, 105);
+  margin-left: 1px;
+  border-radius: 3px;
+}
+.s_icon:hover {
+  background-color: rgb(243, 168, 71);
+}
+.navbarmain .all {
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+  /* top: 7px; */
+}
+.navbarmain #arrow {
+  transform: scale(0.8);
+  width: 18px;
+  height: 15px;
+  position: relative;
+  top: 5px;
+  background-color: rgb(243, 243, 243);
+  /* background-color: black; */
+  border: none;
+}
+.search {
+  /* width: 900px; */
+  flex: 1;
+  padding: 0 10px;
+  font-size: 18px;
+}
+.cartdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carticon {
+  position: relative;
+  top: 5px;
+}
+.addtocart {
+  color: orange;
+  font-weight: bolder;
+  position: relative;
+  left: 19px;
+  top: -26px;
+  font-size: 16px;
+}
+.cart {
+  padding-top: 12px;
+}
+.sign-in-out {
+  font-weight: 700;
+}
+
+/* RESPONSIVE CODE */
+@media only screen and (max-width: 915px) {
+  /* .navbarmain li {
+    color: blue;
+  } */
+  .addtocart {
+    left: 10px;
+    top: 5px;
+    font-size: 16px;
+  }
+  .carticon {
+    display: relative;
+    top: -5px;
+  }
+}
+@media only screen and (max-width: 803px) {
+  /* .navbarmain li {
+    color: red;
+  } */
+  .location,
+  .returnOrders {
+    display: none;
+  }
+  .addtocart {
+    left: 20px;
+    top: -25px;
+  }
+  .carticon {
+    display: relative;
+    top: 5px;
+  }
+}
+@media only screen and (max-width: 654px) {
+  /* .navbarmain li {
+    color: yellow;
+  } */
+  .addtocart {
+    left: 10px;
+    top: 5px;
+  }
+  .carticon {
+    display: relative;
+    top: -5px;
+  }
+  .navbarmain .top {
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    top: 5px;
+  }
+  .navbarmain .bottom {
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 596px) {
+  /* .navbarmain li {
+    color: white;
+  } */
+  .logodiv {
+    display: block;
+    width: 150px;
+    margin: auto;
+  }
+  .carticon {
+    display: relative;
+    top: 6px;
+  }
+  .addtocart {
+    left: 20px;
+    top: -25px;
+  }
+  .navbarmain {
+    display: block;
+    height: 145px;
+    align-items: center;
+  }
+  .searchbox {
+    margin: 3px;
+  }
+  .cartdiv {
+    display: flex;
+    right: 0;
+  }
+  .signInDiv {
+    display: flex;
+    left: 0;
+  }
+}
