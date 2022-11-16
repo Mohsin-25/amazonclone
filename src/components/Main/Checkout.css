@@ -2,15 +2,21 @@
   margin: 20px;
   display: flex;
   /* flex-direction: column; */
+  margin-top: 80px;
+  margin-bottom: 60px;
 }
 .left {
   flex: 1;
 }
 .heading-div {
+  display: flex;
+  /* border: 1px solid blue; */
   background-color: white;
   /* margin: 20px; */
   margin-bottom: 2px;
-  padding: 0 10px 10px 10px;
+  padding: 20px;
+  position: relative;
+  flex: 1;
 }
 .heading-div a {
   color: rgb(0, 113, 133);
@@ -22,14 +28,36 @@
 }
 .heading {
   font-weight: 400;
+  background-color: white;
 }
+.heading-div > span {
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  right: 20px;
+  bottom: 2px;
+}
+
+.subtotal-bottom-div {
+  display: flex;
+  background-color: white;
+  justify-content: flex-end;
+  font-size: 20px;
+  font-weight: 400;
+  padding-right: 20px;
+  height: 70px;
+}
+
 .right {
   display: flex;
   position: sticky;
   flex-direction: column;
   background-color: white;
-  width: 300px;
-  height: 100px;
+  width: 290px;
+  /* height: 100px; */
+  height: 100%;
   padding: 20px;
   /* margin: auto; */
   margin-left: 20px;
@@ -51,33 +79,43 @@
 
 /* RESPONSIVE CODE */
 
-@media only screen and (max-width: 695px) {
+@media only screen and (max-width: 1070px) {
   /* .proceed {
     background-color: blue;
   } */
   .right {
     width: 300px;
-    height: 120px;
+    height: 100%;
   }
 }
-@media only screen and (max-width: 612px) {
+@media only screen and (max-width: 995px) {
   /* .proceed {
     background-color: red;
   } */
   .right {
     width: 300px;
-    height: 140px;
+    /* height: 140px; */
     padding: 10px;
   }
 }
-@media only screen and (max-width: 547px) {
-  /* .proceed {
-    background-color: orchid;
-  } */
+
+@media only screen and (max-width: 900px) {
+  .checkout {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
   .right {
-    width: 300px;
-    height: 180px;
-    padding: 10px;
-    margin-left: 10px;
+    padding: 20px;
+    margin-left: 0px;
+    margin-bottom: 4px;
+    width: auto;
+    /* height: 100%; */
+  }
+}
+@media only screen and (max-width: 480px) {
+  .checkout {
+    margin: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 }

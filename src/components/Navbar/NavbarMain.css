@@ -6,7 +6,8 @@
   height: 60px;
   align-items: center;
   position: relative;
-  /* position: fixed; */
+  position: fixed;
+  width: 100%;
   top: 0%;
   z-index: 50;
 }
@@ -239,5 +240,15 @@
   .signInDiv {
     display: flex;
     left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .logodiv,
+  .signInDiv,
+  .cartdiv {
+    display: none !important;
+  }
+  .navbarmain {
+    height: 50px;
   }
 }

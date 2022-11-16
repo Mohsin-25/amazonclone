@@ -39,7 +39,9 @@ export default function Product({ items }) {
   return (
     <div>
       <div className="product">
+      <div className="pimagediv">
         <img src={items.image} alt="" className="pimage" />
+      </div>
         <div className="pinfo">
           <p className="pcompany">{items.company}</p>
 
@@ -71,7 +73,7 @@ export default function Product({ items }) {
             <small>&#8377;</small>
             {Number(items.price.split(".")[0])}
           </span>
-        </div>
+       
         {cart.some((prod) => prod.id === items.id) ? (
           <button onClick={remove} className="btn remove ">
             Remove From Cart
@@ -81,6 +83,7 @@ export default function Product({ items }) {
             Add to Cart
           </button>
         )}
+         </div>
       </div>
     </div>
   );

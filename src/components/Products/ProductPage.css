@@ -1,0 +1,12 @@
+.productPage {
+  /* background-color: aqua; */
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 20px; */
+  gap: 10px;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  justify-content: center;
+}

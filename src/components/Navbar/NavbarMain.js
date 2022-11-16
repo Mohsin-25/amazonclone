@@ -7,15 +7,19 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { CartState } from "../Internal/Context";
 import { signOut } from "firebase/auth";
 import { auth } from "../Internal/firebase";
+import { useStateValue } from "../StateProvider";
 
 export default function NavbarMain() {
-  const {
-    state: { cart },
-  } = CartState();
+  // const [state, dispatch] = useStateValue();
+  const [{ cart }, dispatch] = useStateValue();
+  // console.log(cart);
+
+  // const {
+  //   state: { cart },
+  // } = CartState();
   const {
     state: { user },
   } = CartState();
-  // console.log(cart);
 
   const logIn = async (e) => {
     if (user) {
@@ -32,7 +36,7 @@ export default function NavbarMain() {
         <Link to="/">
           <div className="logodiv">
             {/* <img src="./photos/amazonicon1.png" alt="" className="logo" /> */}
-            <img src="./photos/amazonNew.png" alt="" className="logo" />
+            <img src="photos/amazonNew.png" alt="" className="logo" />
           </div>
         </Link>
         <ul>

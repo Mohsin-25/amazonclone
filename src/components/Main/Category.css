@@ -1,0 +1,14 @@
+.category {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 15px;
+}
+
+@media screen and (max-width: 480px) {
+  .category {
+    padding: 0 0px;
+    gap: 0px;
+  }
+}

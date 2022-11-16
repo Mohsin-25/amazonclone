@@ -3,18 +3,23 @@ import { Link } from "react-router-dom";
 import CartItem from "../Internal/CartItem";
 import { CartState } from "../Internal/Context";
 import NavbarMain from "../Navbar/NavbarMain";
+import { useStateValue } from "../StateProvider";
 import "./Checkout.css";
 
 export default function Checkout() {
-  const {
-    state: { cart },
-  } = CartState();
+  //   const {
+  //     state: { cart },
+  //   } = useStateValue();
+  const [{ cart }, dispatch] = useStateValue();
+  console.log(cart);
+
   const [total, setTotal] = useState(0);
   useEffect(() => {
     setTotal(
-      cart?.reduce((amount, item) => Number(item.price * item.qty) + amount, 0)
+      cart?.reduce((amount, item) => Number(item.cost * item.qty) + amount, 0)
     );
   }, [cart]);
+
   return (
     <div>
       <NavbarMain />
@@ -32,27 +37,32 @@ export default function Checkout() {
                 </p>
               </div>
             ) : (
-              <div>
-                <h1 className="heading">Shopping Cart</h1>
-              </div>
+              <>
+                {window.innerWidth >= 660 && (
+                  <div>
+                    <h1 className="heading">Shopping Cart</h1>
+                  </div>
+                )}
+                {window.innerWidth >= 660 && <span>Price</span>}
+              </>
             )}
           </div>
           <div className="cart-items">
-            {cart?.map((item) => {
-              return (
-                <CartItem
-                  key={item.id}
-                  id={item.id}
-                  company={item.company}
-                  title={item.title}
-                  image={item.image}
-                  price={item.price}
-                  rating={item.rating}
-                  reviews={item.reviews}
-                ></CartItem>
-              );
+            {cart?.map((item, index) => {
+              return <CartItem {...item} key={index}></CartItem>;
             })}
           </div>
+          {cart.length > 0 && (
+            <div className="subtotal-bottom-div">
+              <p>
+                Subtotal ({cart.length} items):{" "}
+                <b>
+                  <small>&#8377;</small>
+                  {total}
+                </b>
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="right">
