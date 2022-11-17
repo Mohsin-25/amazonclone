@@ -29,7 +29,7 @@ export default function CartItem(props) {
   };
 
   return (
-    <div>
+    <div className="cart-item-container">
       <div className="cart-item">
         {window.innerWidth >= 830 && (
           <input
@@ -46,7 +46,7 @@ export default function CartItem(props) {
           <div className="cart-item-info-left">
             {/* <h3 className="cart-item-company">{props.company}</h3> */}
             {window.innerWidth <= 1140 ? (
-              <p className="cart-item-name">{props.name.slice(0, 150)}...</p>
+              <p className="cart-item-name">{props.name.slice(0, 120)}...</p>
             ) : (
               <p className="cart-item-name">{props.name}</p>
             )}
@@ -56,7 +56,7 @@ export default function CartItem(props) {
             <div style={{ display: "flex" }}>
               {window.innerWidth < 660 && (
                 <h3>
-                  <span className="cart-item-cost"  style={{ marginRight: 20 }}>
+                  <span className="cart-item-cost" style={{ marginRight: 20 }}>
                     <small>&#8377;</small>
                     {Number(props.cost)}.00
                   </span>
@@ -80,9 +80,11 @@ export default function CartItem(props) {
                 </h4>
               )}
             </div>
-            <p>
-              <input type="checkbox" /> This order contains a gift
-            </p>
+            {window.innerWidth > 480 && (
+              <p>
+                <input type="checkbox" /> This order contains a gift
+              </p>
+            )}
             {/* <p>
               {Array(props.rating)
                 .fill()
@@ -100,25 +102,31 @@ export default function CartItem(props) {
                 })}
               <span className="cart-item-reviews">-({props.reviews})</span>
             </p> */}
-            <div className="qty-div">
-              <button>
-                <label htmlFor="qty">Qty : </label>
-                <select name="quantity" id="quantity" onChange={changeQuantity}>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </button>
-              <div className="cart-item-actions-div">
-                <p className="cart-item-actions" onClick={removeFromCart}>
-                  Delete
-                </p>
-                <p className="cart-item-actions">Save for later</p>
-                <p className="cart-item-actions">See more like this</p>
+            {window.innerWidth > 480 && (
+              <div className="qty-div">
+                <button>
+                  <label htmlFor="qty">Qty : </label>
+                  <select
+                    name="quantity"
+                    id="quantity"
+                    onChange={changeQuantity}
+                  >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </button>
+                <div className="cart-item-actions-div">
+                  <p className="cart-item-actions" onClick={removeFromCart}>
+                    Delete
+                  </p>
+                  <p className="cart-item-actions">Save for later</p>
+                  <p className="cart-item-actions">See more like this</p>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* <button onClick={removeFromCart} className="btn remove">
               Remove from cart
@@ -143,6 +151,29 @@ export default function CartItem(props) {
           )}
         </div>
       </div>
+      {window.innerWidth <= 480 && (
+        <div className="qty-div-bottom">
+          <div className="cart-item-actions-div-bottom">
+            <button>
+              <label htmlFor="qty">Qty : </label>
+              <select name="quantity" id="quantity" onChange={changeQuantity}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </button>
+            <p className="cart-item-actions-bottom" onClick={removeFromCart}>
+              Delete
+            </p>
+            <p className="cart-item-actions-bottom">Save for later</p>
+            <p className="cart-item-actions-bottom seemore">
+              See more like this
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -27,7 +27,7 @@ export default function Checkout() {
       <div className="checkout">
         <div className="left">
           <div className="heading-div">
-            {cart.length === 0 ? (
+            {cart.length === 0 && (
               <div>
                 <h1 className="heading">Your Amazon Cart is empty</h1>
                 <Link to="/">Shop today's deals</Link>
@@ -36,7 +36,9 @@ export default function Checkout() {
                   To buy something, click "Add to cart" button around the item
                 </p>
               </div>
-            ) : (
+            )}
+
+            {cart.length > 0 && (
               <>
                 {window.innerWidth >= 660 && (
                   <div>
@@ -47,6 +49,7 @@ export default function Checkout() {
               </>
             )}
           </div>
+
           <div className="cart-items">
             {cart?.map((item, index) => {
               return <CartItem {...item} key={index}></CartItem>;
@@ -73,7 +76,6 @@ export default function Checkout() {
               {total}
             </b>
           </h2>
-
           <p>
             <input type="checkbox" /> This order contains a gift
           </p>

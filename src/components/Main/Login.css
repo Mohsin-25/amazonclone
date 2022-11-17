@@ -178,3 +178,8 @@
     width: 140px;
   }
 }
+@media screen and (max-width: 480px) {
+  .userTop {
+    margin-top: 60px;
+  }
+}

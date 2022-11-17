@@ -34,6 +34,7 @@ export default function Home() {
           className="home_bg"
         />
         <Category></Category>
+
         {/*  <div className="homerow">
           {items?.map((items) => {
             return <Product items={items} key={items.id}></Product>;

@@ -162,6 +162,10 @@
   padding: 10px 20px;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 92%;
+  z-index: 1000;
 }
 .searchDiv {
   display: flex;

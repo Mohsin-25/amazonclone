@@ -113,7 +113,7 @@ export default function Login() {
         </div>
       ) : window.innerWidth <= 480 ? (
         <>
-        <NavbarMain></NavbarMain>
+          <NavbarMain></NavbarMain>
           <div className="loggedIn">
             <div className="userTop">
               <p className="greetUser">
@@ -126,6 +126,7 @@ export default function Login() {
                 <button onClick={logOut}>Logout</button>
               </div>
             </div>
+            <p className="innerwidth">{window.innerWidth}</p>
             <div className="usersOptionsDiv">
               <div className="usersOptions">
                 <p>Your Orders</p>

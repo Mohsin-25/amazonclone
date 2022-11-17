@@ -14,19 +14,26 @@
   background-color: white;
   /* margin: 20px; */
   margin-bottom: 2px;
-  padding: 20px;
+  /* padding: 20px; */
   position: relative;
   flex: 1;
 }
 .heading-div a {
   color: rgb(0, 113, 133);
   text-decoration: none;
+  margin-left: 20px;
+}
+.heading-div p {
+  margin: 20px;
+  margin-top: 0;
 }
 .heading-div a:hover {
   color: rgb(199, 81, 31);
   text-decoration: underline;
 }
 .heading {
+  margin: 20px;
+  margin-bottom: 0;
   font-weight: 400;
   background-color: white;
 }
@@ -115,7 +122,7 @@
 @media only screen and (max-width: 480px) {
   .checkout {
     margin: 10px;
-    margin-top: 10px;
+    margin-top: 70px;
     margin-bottom: 60px;
   }
 }

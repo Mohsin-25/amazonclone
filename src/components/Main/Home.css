@@ -31,6 +31,14 @@
   margin-top: 51px;
   margin-bottom: 40px;
 }
+.innerwidth {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  z-index: 10000;
+  font-size: 8px;
+  color: rgb(220, 220, 220);
+}
 
 @media screen and (max-width: 740px) {
   .home_bg {
@@ -41,5 +49,9 @@
   .home {
     margin-top: 0px;
     margin-bottom: 40px;
+  }
+  .home_bg {
+    margin-top: 62px;
+    margin-bottom: -50px;
   }
 }
