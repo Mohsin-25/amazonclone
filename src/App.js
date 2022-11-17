@@ -19,9 +19,9 @@ import NavbarBottom from "./components/Navbar/NavbarBottom";
 function App() {
   // const [{ user }, dispatch] = CartState();
 
-  // const [{ cart }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
-  const { dispatch } = useStateValue();
+  // const { dispatch } = useStateValue();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {

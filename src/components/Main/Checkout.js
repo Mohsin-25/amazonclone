@@ -11,7 +11,7 @@ export default function Checkout() {
   //     state: { cart },
   //   } = useStateValue();
   const [{ cart }, dispatch] = useStateValue();
-  console.log(cart);
+  // console.log(cart);
 
   const [total, setTotal] = useState(0);
   useEffect(() => {

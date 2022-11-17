@@ -10,3 +10,9 @@
   margin-bottom: 60px;
   justify-content: center;
 }
+
+@media screen and (max-width: 480px) {
+  .productPage {
+    margin-top: 10px;
+  }
+}

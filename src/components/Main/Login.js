@@ -8,8 +8,13 @@ import {
 } from "firebase/auth";
 import "./Login.css";
 import { async } from "@firebase/util";
+import { useStateValue } from "../StateProvider";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import NavbarMain from "../Navbar/NavbarMain";
 
 export default function Login() {
+  const [{ user }, dispatch] = useStateValue();
+
   //   const history = useHistory();
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -23,6 +28,7 @@ export default function Login() {
         email,
         password
       );
+
       navigate("/");
       //   console.log(userNew);
     } catch (error) {
@@ -64,65 +70,117 @@ export default function Login() {
   const logOut = async (e) => {
     await signOut(auth);
   };
-  //   const signIn = (e) => {
-  //     e.preventDefault();
-  //     auth
-  //       .signInWithEmailAndPassword(auth, email, password)
-  //       .then((auth) => {
-  //         // logged in, direct to home page
-  //         // history.push("/");
-  //         // auth = user;
-  //         navigate("/");
-  //         console.log("user = " + users);
-  //       })
-  //       .catch((e) => alert(e.message));
-  //   };
-  //   const register = (e) => {
-  //     e.preventDefault();
-  //     auth
-  //       .createUserWithEmailAndPassword(auth, email, password)
-  //       .then((auth) => {
-  //         // create a user and log it in
-  //         navigate("/");
-  //       })
-  //       .catch((e) => alert(e.message));
-  //   };
+
   return (
-    <div className="login">
-      <Link to="/">
-        <img src="./photos/amazonNew2.png" className="login-logo" alt="" />
-      </Link>
-      <div className="login-div">
-        <h1>Sign-in</h1>
-        <form>
-          <h5>Email</h5>
-          <input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            type="email"
-            required
-          />
-          <h5>Password</h5>
-          <input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type="password"
-            required
-          />
-          <button type="submit" className="sign-in" onClick={logIn}>
-            Sign In
-          </button>
-          <p>
-            By continuing, you agree to Amazon's{" "}
-            <a href="/">Conditions of use</a> and <a href="/">Privacy Notice</a>
-          </p>
-          <hr />
-          <h5>New to Amazon?</h5>
-          <button className="register" onClick={register}>
-            Create your Amazon account
-          </button>
-        </form>
-      </div>
-    </div>
+    <>
+      {!user ? (
+        <div className="login">
+          <Link to="/">
+            <img src="./photos/amazonNew2.png" className="login-logo" alt="" />
+          </Link>
+          <div className="login-div">
+            <h1>Sign-in</h1>
+            <form>
+              <h5>Email</h5>
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                required
+              />
+              <h5>Password</h5>
+              <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                required
+              />
+              <button type="submit" className="sign-in" onClick={logIn}>
+                Sign In
+              </button>
+              <p>
+                By continuing, you agree to Amazon's{" "}
+                <a href="/">Conditions of use</a> and{" "}
+                <a href="/">Privacy Notice</a>
+              </p>
+              <hr />
+              <h5>New to Amazon?</h5>
+              <button className="register" onClick={register}>
+                Create your Amazon account
+              </button>
+            </form>
+          </div>
+        </div>
+      ) : window.innerWidth <= 480 ? (
+        <>
+        <NavbarMain></NavbarMain>
+          <div className="loggedIn">
+            <div className="userTop">
+              <p className="greetUser">
+                Hello, <span>{user?.email.split("@")[0].toUpperCase()}</span>
+              </p>
+              <div className="userProfile">
+                <AccountCircleOutlinedIcon
+                  sx={{ fontSize: 35, color: "gray" }}
+                ></AccountCircleOutlinedIcon>
+                <button onClick={logOut}>Logout</button>
+              </div>
+            </div>
+            <div className="usersOptionsDiv">
+              <div className="usersOptions">
+                <p>Your Orders</p>
+              </div>
+              <div className="usersOptions">
+                <p>Buy Again</p>
+              </div>
+              <div className="usersOptions">
+                <p>Your Account</p>
+              </div>
+              <div className="usersOptions">
+                <p>Your Wish List</p>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div className="login">
+          <Link to="/">
+            <img src="./photos/amazonNew2.png" className="login-logo" alt="" />
+          </Link>
+          <div className="login-div">
+            <h1>Sign-in</h1>
+            <form>
+              <h5>Email</h5>
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                required
+              />
+              <h5>Password</h5>
+              <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                required
+              />
+              <button type="submit" className="sign-in" onClick={logIn}>
+                Sign In
+              </button>
+              <p>
+                By continuing, you agree to Amazon's{" "}
+                <a href="/">Conditions of use</a> and{" "}
+                <a href="/">Privacy Notice</a>
+              </p>
+              <hr />
+              <h5>New to Amazon?</h5>
+              <button className="register" onClick={register}>
+                Create your Amazon account
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

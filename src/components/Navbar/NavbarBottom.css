@@ -17,10 +17,18 @@
 .borderTop {
   border-top: 2px solid green;
 }
-.cartLength {
+.cartLengthL10 {
   position: absolute;
-  top: 3px;
-  left: 19px;
+  top: 6px;
+  left: 21px;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 10;
+}
+.cartLengthM10 {
+  position: absolute;
+  top: 4px;
+  left: 17px;
   font-size: 12px;
   font-weight: 700;
   z-index: 10;

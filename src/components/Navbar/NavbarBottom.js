@@ -18,7 +18,7 @@ export default function NavbarBottom() {
   };
   return (
     <>
-      {window.innerWidth <= 480 && (
+      {window.innerWidth <= 600 && (
         <div className="navbarBottom">
           <Link to="/" style={{ color: "black" }}>
             <HomeOutlinedIcon
@@ -27,7 +27,7 @@ export default function NavbarBottom() {
               onClick={active}
             ></HomeOutlinedIcon>
           </Link>
-          <Link to="/" style={{ color: "black" }}>
+          <Link to="/login" style={{ color: "black" }}>
             <PersonOutlineOutlinedIcon
               sx={{ fontSize: 28 }}
               className="navBottomIcon"
@@ -41,7 +41,11 @@ export default function NavbarBottom() {
                 className="navBottomIcon"
                 onClick={active}
               ></AddShoppingCartOutlinedIcon>
-              <p className="cartLength">{cart.length}</p>
+              <p
+                className={cart.length < 10 ? "cartLengthL10" : "cartLengthM10"}
+              >
+                {cart.length}
+              </p>
               <div className="cover"></div>
             </div>
           </Link>

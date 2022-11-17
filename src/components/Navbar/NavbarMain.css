@@ -153,6 +153,34 @@
   font-weight: 700;
 }
 
+/*  */
+/*  */
+.navbarMobile {
+  /* border: thin solid black; */
+  background: linear-gradient(90deg, rgb(131, 214, 225), rgb(169, 234, 208));
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+.searchDiv {
+  display: flex;
+  border: thin solid grey;
+  flex: 1;
+  background-color: white;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 5px;
+}
+.searchDiv input {
+  flex: 1;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 17px;
+  height: 100%;
+}
+
 /* RESPONSIVE CODE */
 @media only screen and (max-width: 915px) {
   /* .navbarmain li {
