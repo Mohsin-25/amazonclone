@@ -15,6 +15,7 @@ import Styles from "./components/Products/Styles";
 import Household from "./components/Products/Household";
 import { useStateValue } from "./components/StateProvider";
 import NavbarBottom from "./components/Navbar/NavbarBottom";
+import Menu from "./components/Main/Menu";
 
 function App() {
   // const [{ user }, dispatch] = CartState();
@@ -55,6 +56,7 @@ function App() {
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/checkout" element={<Checkout></Checkout>}></Route>
+          <Route path="/menu" element={<Menu></Menu>}></Route>
           <Route path="/tools" element={<Tools></Tools>}></Route>
           <Route path="/devices" element={<Devices></Devices>}></Route>
           <Route path="/styles" element={<Styles></Styles>}></Route>

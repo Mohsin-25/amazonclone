@@ -17,7 +17,6 @@ export default function Home() {
   return (
     <div>
       <NavbarMain />
-      {/* <NavbarBottom></NavbarBottom> */}
 
       <div className="home">
         <img

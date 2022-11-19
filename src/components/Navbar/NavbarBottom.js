@@ -49,7 +49,7 @@ export default function NavbarBottom() {
               <div className="cover"></div>
             </div>
           </Link>
-          <Link to="/" style={{ color: "black" }}>
+          <Link to="/menu" style={{ color: "black" }}>
             <MenuOutlinedIcon
               sx={{ fontSize: 28 }}
               className="navBottomIcon"
