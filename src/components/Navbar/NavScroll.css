@@ -1,0 +1,31 @@
+.navScroll {
+  display: flex;
+  width: auto;
+  background-color: white;
+  /* border: 1px solid red; */
+  overflow-x: scroll;
+  padding: 5px;
+  margin-top: 62px;
+}
+.navScroll::-webkit-scrollbar {
+  display: none;
+}
+.navScrollBox {
+  /* border: 1px solid blue; */
+  display: flex;
+  height: 80px;
+  min-width: 80px !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+}
+.navScrollBox-imgDiv {
+  display: flex;
+  height: 50px;
+}
+.navScrollBox-img {
+  display: flex;
+  object-fit: contain;
+  height: 100%;
+}

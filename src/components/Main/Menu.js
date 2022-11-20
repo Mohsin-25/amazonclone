@@ -54,23 +54,23 @@ export default function Menu() {
   useEffect(() => {
     let boxHide = () => {
       setShowBox1(false);
-      document.querySelector(".b1").classList.remove("selected");
+      // document.querySelector(".b1").classList.remove("selected");
       setShowBox2(false);
-      document.querySelector(".b2").classList.remove("selected");
+      // document.querySelector(".b2").classList.remove("selected");
       setShowBox3(false);
-      document.querySelector(".b3").classList.remove("selected");
+      // document.querySelector(".b3").classList.remove("selected");
       setShowBox4(false);
-      document.querySelector(".b4").classList.remove("selected");
+      // document.querySelector(".b4").classList.remove("selected");
       setShowBox5(false);
-      document.querySelector(".b5").classList.remove("selected");
+      // document.querySelector(".b5").classList.remove("selected");
       setShowBox6(false);
-      document.querySelector(".b6").classList.remove("selected");
+      // document.querySelector(".b6").classList.remove("selected");
       setShowBox7(false);
-      document.querySelector(".b7").classList.remove("selected");
+      // document.querySelector(".b7").classList.remove("selected");
       setShowBox8(false);
-      document.querySelector(".b8").classList.remove("selected");
+      // document.querySelector(".b8").classList.remove("selected");
       setShowBox9(false);
-      document.querySelector(".b9").classList.remove("selected");
+      // document.querySelector(".b9").classList.remove("selected");
     };
     document.addEventListener("mousedown", boxHide);
   });

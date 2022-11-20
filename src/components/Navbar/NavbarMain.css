@@ -186,7 +186,7 @@
 }
 
 /* RESPONSIVE CODE */
-@media only screen and (max-width: 915px) {
+@media only screen and (max-width: 995px) {
   /* .navbarmain li {
     color: blue;
   } */
@@ -200,7 +200,8 @@
     top: -5px;
   }
 }
-@media only screen and (max-width: 803px) {
+
+@media only screen and (max-width: 880px) {
   /* .navbarmain li {
     color: red;
   } */
@@ -211,6 +212,20 @@
   .addtocart {
     left: 20px;
     top: -25px;
+  }
+  .carticon {
+    display: relative;
+    top: 5px;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  /* .navbarmain li {
+    color: red;
+  } */
+  .addtocart {
+    left: 10px;
+    top: 5px;
   }
   .carticon {
     display: relative;
@@ -281,6 +296,6 @@
     display: none !important;
   }
   .navbarmain {
-    height: 50px;
+    height: 40px;
   }
 }

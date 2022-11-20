@@ -31,7 +31,7 @@ export default function NavbarMain() {
 
   return (
     <div>
-      {window.innerWidth > 480 ? (
+      {window.innerWidth > 600 ? (
         <div className="navbarmain">
           {/* <div className="logoOnly"></div>
       <div className="noLogo"></div> */}

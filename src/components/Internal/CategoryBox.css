@@ -50,7 +50,7 @@
   }
   .categoryBox-imgBox > figure {
     /* outline: 1px solid black; */
-    width: 200px;
+    width: 48%;
   }
   .categoryBox h2 {
     font-weight: 500;
@@ -58,30 +58,18 @@
   }
 }
 @media screen and (max-width: 460px) {
-  .categoryBox-imgBox > figure {
-    /* outline: 1px solid black; */
-    width: 170px;
-  }
   .categoryBox {
-    height: 360px;
+    height: 380px;
   }
 }
 
-@media screen and (max-width: 405px) {
-  .categoryBox-imgBox > figure {
-    width: 160px;
-  }
-}
-@media screen and (max-width: 385px) {
-  .categoryBox-imgBox > figure {
-    width: 140px;
-  }
+@media screen and (max-width: 400px) {
   .categoryBox {
-    height: 340px;
+    height: 350px;
   }
 }
-@media screen and (max-width: 345px) {
-  .categoryBox-imgBox > figure {
-    width: 130px;
+@media screen and (max-width: 350px) {
+  .categoryBox {
+    height: 330px;
   }
 }
